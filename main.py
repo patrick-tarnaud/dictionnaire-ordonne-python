@@ -1,16 +1,16 @@
-# This is a sample Python script.
+from dictionnaire_ordonne import *
 
-# Press Maj+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def main():
+    d1 = DictionnaireOrdonne()
+    print(d1)
+
+    d_init = dict()
+    d_init["pommes"] = 25
+    d_init["poires"] = 30
+    d_init["framboises"] = 100
+    d2 = DictionnaireOrdonne(d_init)
+    print(d2)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    main()
