@@ -15,6 +15,12 @@ def main():
     d3 = DictionnaireOrdonne(framboises=20, fraise=40, cerises=50)
     print(d3)
 
+    try:
+        print(d2["pommes"])
+        print(d2["bananes"])
+    except KeyError as e:
+        print(e)
+
 
 if __name__ == '__main__':
     main()

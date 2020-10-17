@@ -29,3 +29,13 @@ class DictionnaireOrdonne():
 
     def __repr__(self):
         return self.__str__()
+
+    def __getitem__(self, key):
+        # recherche de la key dans key_list pour obtenir l'index
+        try:
+            index = self.key_list.index(key)
+        except ValueError as e:
+            # la ValueError de la liste se transforme en KeyError car l'instance doit se comporter comme un dictionnaire
+            raise KeyError(f"{key} is not in the ordered dictionnary")
+        return self.value_list[index]
+        # renvoie de la valeur dans value_list pour l'index
