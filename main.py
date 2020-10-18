@@ -3,7 +3,6 @@ from dictionnaire_ordonne import *
 
 def main():
     d0 = {'framboises': 20, 'fraise': 40, 'cerises': 50, 'figues': 200}
-
     d1 = DictionnaireOrdonne()
     print(d1)
 
@@ -42,6 +41,19 @@ def main():
     print("ananas in d2", 'ananas' in d2)
 
     print('len(d2)', len(d2))
+
+    print('d2 avant tri', d2)
+    d2.sort()
+    print('d2 après tri', d2)
+    d2.reverse()
+    print('d2 après reverse', d2)
+
+    for c in d0:
+        print(c)
+
+    for k in d2:
+        print(k)
+
 
 if __name__ == '__main__':
     main()
