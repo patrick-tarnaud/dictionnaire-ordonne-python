@@ -39,3 +39,12 @@ class DictionnaireOrdonne():
             raise KeyError(f"{key} is not in the ordered dictionnary")
         return self.value_list[index]
         # renvoie de la valeur dans value_list pour l'index
+
+    def __setitem__(self, key, value):
+        # si la clé existe dejà : on remplace la valeur simplement au même index que dans key_list
+        # si la clé n'existe pas : on ajoute la clé et la valeur aux 2 listes
+        if key in self.key_list:
+            self.value_list[self.key_list.index(key)] = value
+        else:
+            self.key_list.append(key)
+            self.value_list.append(value)

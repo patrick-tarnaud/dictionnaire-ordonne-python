@@ -21,4 +21,10 @@ def main():
     except KeyError as e:
         print(e)
 
+    d2["bananes"] = 100
+    d2["pommes"] = 50
+    print(d2)
 
+
+if __name__ == '__main__':
+    main()
