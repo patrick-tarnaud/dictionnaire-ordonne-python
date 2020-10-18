@@ -2,6 +2,8 @@ from dictionnaire_ordonne import *
 
 
 def main():
+    d0 = {'framboises': 20, 'fraise': 40, 'cerises': 50, 'figues': 200}
+
     d1 = DictionnaireOrdonne()
     print(d1)
 
@@ -25,6 +27,16 @@ def main():
     d2["pommes"] = 50
     print(d2)
 
+    print('d0', d0)
+    del d0['framboises']
+    print('d0', d0)
+
+    try:
+        del d2["bananes"]
+        print('d2', d2)
+        del d2["ananas"]
+    except KeyError as e:
+        print(e)
 
 if __name__ == '__main__':
     main()

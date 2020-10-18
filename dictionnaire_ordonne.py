@@ -48,3 +48,12 @@ class DictionnaireOrdonne():
         else:
             self.key_list.append(key)
             self.value_list.append(value)
+
+    def __delitem__(self, key):
+        # en cas de suppression, il faut supprimer dans les 2 listes : key_list et value_list
+        if key in self.key_list:
+            ind = self.key_list.index(key)
+            del self.value_list[ind]
+            del self.key_list[ind]
+        else:
+            raise KeyError(f"KeyError : '{key}'")
