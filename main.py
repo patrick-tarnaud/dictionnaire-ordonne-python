@@ -38,5 +38,9 @@ def main():
     except KeyError as e:
         print(e)
 
+    print("pommes in d2", 'pommes' in d2)
+    print("ananas in d2", 'ananas' in d2)
+
+
 if __name__ == '__main__':
     main()

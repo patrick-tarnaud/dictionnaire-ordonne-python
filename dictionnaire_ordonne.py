@@ -57,3 +57,6 @@ class DictionnaireOrdonne():
             del self.key_list[ind]
         else:
             raise KeyError(f"KeyError : '{key}'")
+
+    def __contains__(self, key):
+        return key in self.key_list
