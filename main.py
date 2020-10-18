@@ -41,6 +41,7 @@ def main():
     print("pommes in d2", 'pommes' in d2)
     print("ananas in d2", 'ananas' in d2)
 
+    print('len(d2)', len(d2))
 
 if __name__ == '__main__':
     main()

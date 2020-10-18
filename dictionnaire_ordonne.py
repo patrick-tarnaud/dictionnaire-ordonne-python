@@ -60,3 +60,6 @@ class DictionnaireOrdonne():
 
     def __contains__(self, key):
         return key in self.key_list
+
+    def __len__(self):
+        return len(self.key_list)
