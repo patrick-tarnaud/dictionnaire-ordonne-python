@@ -82,3 +82,14 @@ class DictionnaireOrdonne():
 
     def __iter__(self):
         return iter(self._key_list)
+
+    def keys(self):
+        return self._key_list
+
+    def values(self):
+        return self._value_list
+
+    def items(self):
+        for key in self._key_list:
+            val = self[key]
+            yield key, val

@@ -48,11 +48,25 @@ def main():
     d2.reverse()
     print('d2 après reverse', d2)
 
-    for c in d0:
-        print(c)
+    # for c in d0:
+    #     print(c)
+    #
+    # for c in d0.keys():
+    #     print(c)
 
     for k in d2:
         print(k)
+
+    print('k in d2.keys()')
+    for k in d2.keys():
+        print(k)
+
+    print('for v in d2.values()')
+    for v in d2.values():
+        print(v)
+
+    for k, v in d2.items():
+        print(f'({k}, {v})')
 
 
 if __name__ == '__main__':
